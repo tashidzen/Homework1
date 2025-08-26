@@ -140,6 +140,15 @@
             }
             alert(`Количество правильных ответов = ${correct}`);
         }
+
+        function sixthGame(){
+            const backgroundAbout = document.querySelector('.about');
+            const backgroundMiniGames = document.querySelector('.mini-games');
+            const btn = document.querySelector('.game__btn--six');
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            backgroundAbout.style.backgroundColor = randomColor;
+            backgroundMiniGames.style.backgroundColor = randomColor;
+        }
     </script>
 </head>
 <body>
@@ -310,7 +319,7 @@
                         <span>цветов</span>
                     </h2>
                     <p class="game__description">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button class="game__btn">Играть!</button>
+                    <button onclick="sixthGame()" class="game__btn game__btn--six">Играть!</button>
                 </div>
             </article>
         </div>
