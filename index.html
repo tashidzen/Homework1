@@ -10,20 +10,30 @@
         function firstGame(){
             let num = Math.ceil(Math.random() * 100);
             // console.log(num); // раскомментировать эту строку для проверки
-            let userNum = Number(prompt(`Введите целое число от 1 до 100`));
-            if (isNaN(userNum)) {
-                alert(`Вы ввели нечисловое значение`);
+            let userNum = prompt(`Введите целое число от 1 до 100`);
+            if (userNum === null) {
+                return; // При нажатии на "Отмена", игра завершится
             } else {
-                while (userNum != num || userNum === num){
-                    if (userNum > num) {
-                        alert(`Загаданное число меньше введенного Вами`);
-                    } else if (userNum < num) {
-                        alert(`Загаданное число больше введенного Вами`);
-                    } else {
-                        alert(`Вы угадали!`);
-                        break;
+                userNum = Number(userNum);
+                if (isNaN(userNum)) {
+                    alert(`Вы ввели нечисловое значение`);
+                } else {
+                    while (userNum != num || userNum === num){
+                        if (userNum > num) {
+                            alert(`Загаданное число меньше введенного Вами`);
+                        } else if (userNum < num) {
+                            alert(`Загаданное число больше введенного Вами`);
+                        } else {
+                            alert(`Вы угадали!`);
+                            break;
+                        }
+                        userNum = prompt(`Введите целое число от 1 до 100`);
+                        if (userNum === null) {
+                            return; // При нажатии на "Отмена", игра завершится
+                        } else {
+                            userNum = Number(userNum);
+                        }
                     }
-                    userNum = Number(prompt(`Введите целое число от 1 до 100`));
                 }
             }
         }
@@ -75,13 +85,18 @@
 
         function fourthGame(){
             let userChoice = prompt("Введите свой выбор: камень, ножницы или бумага?");
+            if (userChoice === null) return;
             userChoice = userChoice.toLowerCase();
-            if (userChoice !== "камень" && userChoice !== "ножницы" && userChoice !== "бумага"){
-                confirm("Введено отличное от предложенного выбора значение.");
-                return;
+            while (userChoice !== null && userChoice !== "камень" && userChoice !== "ножницы" && userChoice !== "бумага"){
+                const wantContinue = confirm("Введено отличное от предложенного выбора значение. Повторим игру?");
+                if (!wantContinue) {
+                    return;
+                }
+                userChoice = prompt("Введите свой выбор: камень, ножницы или бумага?");
+                userChoice = userChoice.toLowerCase();
             }
 
-            array = ["камень", "ножницы", "бумага"];
+            const array = ["камень", "ножницы", "бумага"];
             let index = Math.floor(Math.random() * 3);
             let computerChoice = array[index];
 

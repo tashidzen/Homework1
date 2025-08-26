@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -133,6 +134,7 @@ button {
     font-weight: 600;
     line-height: 141.69%;
     text-align: center;
+    transition: 0.3s;
   }
 
   &__btn:hover{
@@ -339,7 +341,8 @@ button {
     border-radius: 60px;
     background: $base-color;
     border: none;
-    padding: 16px 75px;  
+    padding: 16px 75px;
+    transition: 0.3s;
   }
 
   &__btn:hover{

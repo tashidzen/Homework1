@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="heading1">Задание 1</h1>
+    <button class="btn1">Скрыть</button>
+
+    <p class="paragraph2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, voluptatem?</p>
+    <button class="btn2">Изменить цвет</button>
+
+    <h1 class="heading3">Задание 3</h1>
+    <button class="btn3">Изменить текст</button>
+
+    <h1 class="description">Задание 4</h1>
+    <p class="description">Lorem, ipsum dolor.</p>
+    <h3 class="description">Задание 4</h3>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, fuga.</p>
+    <h3 class="description">Всё ещё задание 4</h3>
+    <p class="description">Последний абзац задания 4.</p>
+
+    <h1>Задание 5</h1>
+    <p class="description2">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="desc">Lorem, ipsum dolor.</p>
+    <p class="description2">Lorem ipsum dolor sit amet.</p>
+    <p class="desc">Конец задания 5.</p>
+
+    <button class="btn6">Добавить элемент</button>
+
+    <p class="desc">Задание 7.</p>
+    <button class="btn7">Удалить элемент</button>
+    <p class="description3">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="description3">Lorem, ipsum dolor.</p>
+    <p class="description3">Lorem ipsum dolor sit amet.</p>
+    <p class="desc">Конец задания 7.</p>
+
+    <script>
+        // Задание 1
+        const heading = document.querySelector('.heading1');
+        const button1 = document.querySelector('.btn1');
+        button1.addEventListener('click', () => {
+            heading.classList.toggle('hidden');
+        });
+
+        // Задание 2
+        const button2 = document.querySelector('.btn2');
+        const paragraph = document.querySelector('.paragraph2');
+        button2.addEventListener('click', () => {
+            paragraph.style.color = 'blue';
+        });
+
+        // Задание 3
+        const button3 = document.querySelector('.btn3');
+        const heading_3 = document.querySelector('.heading3');
+        button3.addEventListener('click', () => {
+            heading_3.textContent = 'Привет, мир!';
+        });
+
+        // Задание 4
+        const allElements = document.querySelectorAll('.description');
+        allElements.forEach(description => {
+            description.textContent = 'Измененный текст';
+        });
+
+        // Задание 5
+        const allDesc = document.querySelectorAll('.description2');
+        allDesc.forEach(description => {
+            description.textContent = 'Новый текст';
+        });
+
+        // Задание 6
+        const button6 = document.querySelector('.btn6');
+        button6.addEventListener('click', () => {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Новый абзац.';
+            document.body.appendChild(newParagraph);
+        });
+
+        // Задание 7
+        const desc3 = document.querySelector('.description3');
+        const button7 = document.querySelector('.btn7');
+        button7.addEventListener('click', () => {
+            desc3.remove();
+        });
+    </script> 
+</body>
+</html>
