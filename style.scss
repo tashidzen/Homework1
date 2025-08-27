@@ -1,4 +1,12 @@
 @import "variables";
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 * {
   margin: 0;
@@ -150,6 +158,27 @@ button {
 .running-line{
   height: 90px;
   background-color: $light-green-color;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+
+  &__box{
+    display: flex;
+    position: absolute;
+    gap: 51px;
+    align-items: center;
+    animation: scroll-left 10s linear infinite;
+  }
+
+  &__text{
+    color: $base-color;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+    white-space: nowrap;
+  }
 }
 
 .about{
