@@ -440,6 +440,9 @@ button {
     left: 304px;
     top: 580px;
   }
+  .about {
+    display: none;
+  }
   .game {
     flex-direction: column;
     align-items: center;
@@ -488,8 +491,14 @@ button {
     border: none;
   }
   .mini-games {
-    padding-top: 48px;
+    padding-top: 86px;
     padding-bottom: 10px;
+  }
+  .mini-games__top-stars::before, .mini-games__top-stars::after {
+    display: none;
+  }
+  .mini-games__bottom-stars::before, .mini-games__bottom-stars::after {
+    display: none;
   }
 }
 @media (max-width: 767px) {
