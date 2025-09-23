@@ -30,6 +30,10 @@
         }
     }
 
+    .about{
+        display: none;
+    }
+
     .game{
         flex-direction: column;
         align-items: center;
@@ -94,7 +98,19 @@
     }
 
     .mini-games{
-        padding-top: 48px;
+        padding-top: 86px;
         padding-bottom: 10px;
+
+        &__top-stars{
+            &::before, &::after {
+            display: none;
+            }
+        }
+
+        &__bottom-stars{
+            &::before, &::after {
+            display: none;
+            }
+        }
     }
 }
