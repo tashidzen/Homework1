@@ -440,6 +440,28 @@ button {
     left: 304px;
     top: 580px;
   }
+  .top__btn {
+    display: none;
+  }
+  .top__btn-mobile {
+    display: inline-block;
+    background: #202027;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 16px;
+    border-radius: 60px;
+    border: none;
+    padding: 16px 110px;
+  }
+  .top__btn-mobile:hover {
+    background-color: #202027;
+    color: #FFFFFF;
+    border: none;
+  }
   .about {
     display: none;
   }
