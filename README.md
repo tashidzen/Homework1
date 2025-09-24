@@ -20,3 +20,4 @@
 ## Технологии
 В проекте использованы технологии: JavaScript, HTML, CSS (SASS), БЭМ, Git.
 
+### Ссылка на деплой проекта: https://tashidzen.github.io/mini-games-website/
