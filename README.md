@@ -18,6 +18,6 @@
 6) "Генератор случайных цветов". 
 
 ## Технологии
-В проекте использованы технологии: JavaScript, HTML, CSS (SASS), БЭМ, Git.
+В проекте использованы технологии: JavaScript, HTML, CSS (SСSS), БЭМ, Git.
 
-### Ссылка на деплой проекта: https://tashidzen.github.io/mini-games-website/
+### Посмотреть готовый сайт можно по ссылке: https://tashidzen.github.io/mini-games-website/
